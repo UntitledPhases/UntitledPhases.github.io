@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume - Nojus Liutikas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="name">nojus liutikas</a>
+    <div class="links">
+      <a href="index.html#projects">projects</a>
+      <a href="index.html#blog">writing</a>
+      <a href="resume.html" class="active">resume</a>
+      <a href="index.html#contact">contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="resume-header">
+    <h1>Nojus Liutikas</h1>
+    <div class="meta">
+      Livingston, NJ 07039<br>
+      (862) 215-1444 &middot; <a href="mailto:liutikasnojus@gmail.com">liutikasnojus@gmail.com</a> &middot; <a href="https://github.com/UntitledPhases">github.com/UntitledPhases</a>
+    </div>
+  </div>
+
+  <p class="resume-summary">Systems-oriented IT student who builds lightweight infrastructure under real constraints. Hands-on with networking, Linux administration, and multi-node system design. Seeking infrastructure, systems, or platform engineering roles where fundamentals matter more than abstractions.</p>
+
+  <!-- EDUCATION -->
+  <div class="resume-section">
+    <div class="resume-section-title">Education</div>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <h3>Montclair State University</h3>
+        <span class="date">Expected May 2026</span>
+      </div>
+      <div class="subtitle">B.S. Information Technology, Minor in Mathematics &middot; GPA: 3.2</div>
+      <ul>
+        <li>Coursework: Network Security, System Administration, Infrastructure Design, Software Engineering, Internet Computing</li>
+        <li>Labs: DNS (BIND), IDS (Snort), Apache virtual hosting, Cisco Packet Tracer, buffer overflow exploit analysis</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TECHNICAL PROJECTS -->
+  <div class="resume-section">
+    <div class="resume-section-title">Technical Projects</div>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <h3>Edge Infrastructure Platform (EIP)</h3>
+        <span class="date">2025 - Present</span>
+      </div>
+      <div class="subtitle">Personal Project &middot; <a href="https://github.com/UntitledPhases/edge-infrastructure-platform">github.com/UntitledPhases/edge-infrastructure-platform</a></div>
+      <ul>
+        <li>Built multi-node private infrastructure: Pi control plane (5W, always-on), hub compute node via WoL, laptop operator.</li>
+        <li>Tailscale mesh VPN as trust boundary with MagicDNS. SSH/RDP remote access via MobaXterm across all nodes.</li>
+        <li>Flask API for host management deployed as systemd services. RAID1 on 4TB CMR drives, automated nightly backups.</li>
+        <li>Design principles: resource discipline (min overhead, max capability), CIA triad, fundamentals-first.</li>
+      </ul>
+    </div>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <h3>SteelBeam - Team Lead</h3>
+        <span class="date">2025</span>
+      </div>
+      <div class="subtitle">Internet Computing Course &middot; <a href="https://github.com/UntitledPhases/SteelBeam">github.com/UntitledPhases/SteelBeam</a></div>
+      <ul>
+        <li>Led 4-person team building full-stack game library app. Wrote majority of codebase (111 commits).</li>
+        <li>Owned auth (session cookies, bcrypt), DB schema (CASCADE deletes, ENUM fields), RAWG API integration, UI iteration.</li>
+      </ul>
+    </div>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <h3>DDoS Simulation and Mitigation</h3>
+        <span class="date">2024</span>
+      </div>
+      <div class="subtitle">Computer Networks Final Project</div>
+      <ul>
+        <li>Built HTTP flood, amplification, and Slowloris simulations. Documented vectors and mitigation strategies.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <div class="resume-section">
+    <div class="resume-section-title">Professional Experience</div>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <h3>Development Manager</h3>
+        <span class="date">May 2022 - Aug 2024</span>
+      </div>
+      <div class="subtitle">Ramas Climate & Refrigeration LLC, Livingston, NJ</div>
+      <ul>
+        <li>Led digital tool adoption for service tracking. Configured Windows domain, email, and access controls for office network.</li>
+        <li>Built technical training modules for field staff on new systems and equipment.</li>
+      </ul>
+    </div>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <h3>HVAC Technician / Site Manager</h3>
+        <span class="date">Feb 2018 - Sept 2021</span>
+      </div>
+      <div class="subtitle">Ramas Climate & Refrigeration LLC, Livingston, NJ</div>
+      <ul>
+        <li>Diagnosed/repaired residential and industrial HVAC and building automation systems. Managed sites, EPA compliance.</li>
+      </ul>
+    </div>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
+        <h3>Account Executive</h3>
+        <span class="date">Sept 2021 - May 2022</span>
+      </div>
+      <div class="subtitle">Phoenician International Inc., Hoboken, NJ</div>
+      <ul>
+        <li>Managed 20+ client accounts. Designed campaigns increasing product exposure and engagement.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="resume-section">
+    <div class="resume-section-title">Skills</div>
+
+    <div class="skills-grid">
+      <span class="label">Languages</span>
+      <span class="value">Python, Java, C, SQL, Bash, HTML/CSS, JavaScript, PHP</span>
+
+      <span class="label">Infrastructure</span>
+      <span class="value">Linux admin (Debian/Ubuntu/RPi OS), Windows Server/AD, systemd, Flask, Git, RAID</span>
+
+      <span class="label">Networking</span>
+      <span class="value">TCP/IP, DNS, DHCP, VLANs, firewall rules/ACLs, VPN (Tailscale), WoL, Wireshark, SSH/RDP (MobaXterm)</span>
+
+      <span class="label">Security</span>
+      <span class="value">IDS (Snort), packet analysis, access control config, exploit analysis</span>
+
+      <span class="label">Certs</span>
+      <span class="value">CompTIA ITF+, EPA 608</span>
+
+      <span class="label">Spoken</span>
+      <span class="value">English (fluent), Lithuanian (fluent), Russian (intermediate)</span>
+    </div>
+  </div>
+
+  <!-- DOWNLOAD -->
+  <a href="Nojus_Liutikas_Resume.pdf" class="resume-download">download resume (pdf) &rarr;</a>
+
+</div>
+
+<footer>
+  <p>built with no framework, as intended</p>
+</footer>
+
+</body>
+</html>
