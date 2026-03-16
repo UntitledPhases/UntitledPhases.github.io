@@ -1,24 +1,366 @@
-Context Transfer: Personal Website + Resume + Blog (March 16, 2026)
-Who: Nojus Liutikas. GitHub: UntitledPhases. Systems thinker, infrastructure/systems engineering career track, graduating soon. Based in Livingston, NJ.
-Three deliverables:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nojus Liutikas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --border: #1a1a1a;
+  --border-accent: #252525;
+  --text: #e0e0e0;
+  --text-muted: #707070;
+  --text-dim: #4a4a4a;
+  --accent: #c8c8c8;
+  --link: #a0a0a0;
+  --link-hover: #ffffff;
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'IBM Plex Sans', sans-serif;
+}
 
-GitHub Pages personal site (resume + portfolio + blog, single domain)
-Resume update (reflect EIP + current projects)
-Blog structure + first posts
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-Site approach decision still needed: Simple HTML/CSS vs Jekyll (blog support) vs React/Next.js. Ask before building.
-Blog purpose: Dual-purpose. Personal expression showing how he thinks (ideology, AI, religion, beliefs) AND professional signal to hiring managers that he reasons clearly about complex topics. Same domain as portfolio. Professionalism retained, but authentic voice.
-GitHub repos to feature on portfolio:
-1. edge-infrastructure-platform (EIP) (main project)
-Multi-node network management platform for private infrastructure. Pi control plane (5W, always-on), Hub compute node (sleeps, wakes via WoL), laptop operator. Tailscale mesh as trust boundary. Flask API, systemd, RAID1 (4TB CMR), automated nightly backups via robocopy. README shipped (cold, decision-focused). Design principles: resource discipline (min overhead, max capability), CIA triad, fundamentals-first (no Docker/K8s/Nginx).
-Repo: github.com/UntitledPhases/edge-infrastructure-platform
-2. SteelBeam (team project)
-Game library/catalog web app. PHP/MySQL/JS/RAWG API. 4-person team (TeamBeam), Nojus was team lead and wrote most of the codebase. 111 commits. Built for internet computing course. He owned: login/registration full stack, session cookie auth, DB schema (bcrypt, CASCADE delete, ENUM status), library card generation (JS+PHP), most HTML/CSS, UI rework after user feedback, API config pattern. Video demo exists.
-Repo: github.com/UntitledPhases/SteelBeam
-3. gLLove (concept stage)
-Philosophy repo. Core argument: your data is already collected by platforms, sold through data brokers, correlated via hardware fingerprinting. None of it is used to help you. gLLove flips that: centralize your own data, surface cross-app patterns (mood + spending + sleep + screen time), feed into an LLM that actually knows you. No code yet, README drafted.
-Repo: not yet created
-Resume: No current copy uploaded yet. Need to get it from him.
-Style preferences: Direct, cold tone. No em dashes. No bullet lists where prose works. Minimal AI voice. Resource discipline is a core design principle across his work. He responds to structural solutions, not motivational language. Use SMART goal framing with deadlines when relevant.
-CRITICAL REMINDER FOR NOJUS: PAY TUITION + REGISTER TO GRADUATE TODAY (March 16). Deadline. Alarm should be set.
-EIP Notion project doc ID: 324062d6-840b-818d-8efc-e1c567a5861f
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #333;
+  color: #fff;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { color: var(--link-hover); }
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAV */
+nav {
+  padding: 32px 0 0;
+  margin-bottom: 80px;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+nav .name {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+nav .links {
+  display: flex;
+  gap: 28px;
+}
+nav .links a {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+  text-transform: lowercase;
+}
+nav .links a:hover { color: var(--text); }
+
+/* SECTIONS */
+section {
+  margin-bottom: 80px;
+}
+.section-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+}
+
+/* HERO */
+.hero h1 {
+  font-family: var(--sans);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+.hero p {
+  color: var(--text-muted);
+  max-width: 560px;
+  margin-bottom: 12px;
+}
+.hero .status {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 20px;
+}
+.hero .status span {
+  color: #4a7a4a;
+}
+
+/* PROJECTS */
+.project {
+  border: 1px solid var(--border);
+  padding: 28px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+.project:hover {
+  border-color: var(--border-accent);
+}
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+.project h3 {
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--accent);
+}
+.project .tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.project p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.project .stack {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+/* BLOG */
+.post-entry {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+}
+.post-entry:first-child {
+  border-top: 1px solid var(--border);
+}
+.post-title {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--text);
+}
+.post-title:hover { color: var(--link-hover); }
+.post-date {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.blog-note {
+  color: var(--text-dim);
+  font-size: 13px;
+  margin-top: 16px;
+  font-style: italic;
+}
+
+/* RESUME */
+.resume-entry {
+  margin-bottom: 28px;
+}
+.resume-entry h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.resume-meta {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+.resume-entry p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* CONTACT */
+.contact-links {
+  display: flex;
+  gap: 32px;
+}
+.contact-links a {
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+footer p {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 520px) {
+  .hero h1 { font-size: 22px; }
+  .project { padding: 20px; }
+  .post-entry { flex-direction: column; gap: 4px; }
+  .contact-links { flex-direction: column; gap: 12px; }
+  nav .links { gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <span class="name">nojus liutikas</span>
+    <div class="links">
+      <a href="#projects">projects</a>
+      <a href="#blog">writing</a>
+      <a href="#resume">resume</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <section class="hero">
+    <h1>I build lightweight infrastructure that respects constraints.</h1>
+    <p>Systems engineering. Private infrastructure. Resource discipline as a design principle: minimum overhead, maximum capability. No abstraction without justification.</p>
+    <p>Graduating 2026. Based in New Jersey.</p>
+    <div class="status"><span>&#9679;</span> Open to infrastructure and systems engineering roles</div>
+  </section>
+
+  <section id="projects">
+    <div class="section-label">Projects</div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3>edge-infrastructure-platform</h3>
+        <span class="tag">active</span>
+      </div>
+      <p>Multi-node network management platform for private infrastructure. Pi control plane running at 5W (always-on), hub compute node that sleeps and wakes via WoL, laptop as operator. Tailscale mesh as trust boundary. RAID1 across 4TB CMR drives with automated nightly backups. No Docker, no K8s, no Nginx. Fundamentals only.</p>
+      <div class="stack">python / flask / systemd / tailscale / robocopy / bash</div>
+      <br>
+      <a href="https://github.com/UntitledPhases/edge-infrastructure-platform" style="font-family:var(--mono);font-size:12px;">github &rarr;</a>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3>SteelBeam</h3>
+        <span class="tag">complete</span>
+      </div>
+      <p>Game library and catalog web app. 4-person team project where I served as team lead and wrote most of the codebase (111 commits). Built login/registration full stack, session cookie auth, DB schema with bcrypt and CASCADE deletes, library card generation, and led UI rework after user feedback.</p>
+      <div class="stack">php / mysql / javascript / rawg api / html / css</div>
+      <br>
+      <a href="https://github.com/UntitledPhases/SteelBeam" style="font-family:var(--mono);font-size:12px;">github &rarr;</a>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3>gLLove</h3>
+        <span class="tag">concept</span>
+      </div>
+      <p>Your data is already collected, sold through brokers, correlated via hardware fingerprinting. None of it is used to help you. gLLove flips the model: centralize your own data, surface cross-app patterns (mood, spending, sleep, screen time), and feed it into an LLM that actually knows you.</p>
+      <div class="stack">architecture / readme drafted / repo incoming</div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="section-label">Writing</div>
+
+    <div class="post-entry">
+      <a href="#" class="post-title">Why I don't use Docker (yet)</a>
+      <span class="post-date">coming soon</span>
+    </div>
+    <div class="post-entry">
+      <a href="#" class="post-title">Resource discipline as design philosophy</a>
+      <span class="post-date">coming soon</span>
+    </div>
+    <div class="post-entry">
+      <a href="#" class="post-title">Building trust boundaries with Tailscale</a>
+      <span class="post-date">coming soon</span>
+    </div>
+
+    <p class="blog-note">Posts will cover infrastructure decisions, systems thinking, and how I reason about things that matter. Professional signal, personal voice.</p>
+  </section>
+
+  <section id="resume">
+    <div class="section-label">Experience &amp; Education</div>
+
+    <div class="resume-entry">
+      <h3>Edge Infrastructure Platform</h3>
+      <div class="resume-meta">Personal Project // 2025 &ndash; Present</div>
+      <p>Designed and built a multi-node private infrastructure platform from scratch. Implemented control plane on Raspberry Pi, compute orchestration via Wake-on-LAN, Tailscale mesh networking, RAID1 storage, and automated backup pipelines. All decisions documented with rationale in a public README.</p>
+    </div>
+
+    <div class="resume-entry">
+      <h3>SteelBeam &ndash; Team Lead</h3>
+      <div class="resume-meta">Internet Computing Course // 2025</div>
+      <p>Led a 4-person team building a full-stack game library application. Owned authentication, database design, API integration, and front-end architecture. Drove UI iteration based on user feedback.</p>
+    </div>
+
+    <div class="resume-entry">
+      <h3>B.S. Computer Science</h3>
+      <div class="resume-meta">Graduating 2026</div>
+      <p>Systems-focused coursework. Livingston, NJ.</p>
+    </div>
+
+    <!-- ADD: Upload your actual resume PDF and link it here -->
+    <!-- <a href="resume.pdf" style="font-family:var(--mono);font-size:12px;">download resume (pdf) &rarr;</a> -->
+  </section>
+
+  <section id="contact">
+    <div class="section-label">Contact</div>
+    <div class="contact-links">
+      <a href="https://github.com/UntitledPhases">github</a>
+      <!-- <a href="mailto:your@email.com">email</a> -->
+      <!-- <a href="https://linkedin.com/in/yourprofile">linkedin</a> -->
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>built with no framework, as intended</p>
+</footer>
+
+</body>
+</html>
