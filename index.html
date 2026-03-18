@@ -8,17 +8,7 @@
 </head>
 <body>
 
-<nav>
-  <div class="container">
-    <a href="index.html" class="name">nojus liutikas</a>
-    <div class="links">
-      <a href="index.html#projects">projects</a>
-      <a href="index.html#blog">writing</a>
-      <a href="resume.html">resume</a>
-      <a href="index.html#contact">contact</a>
-    </div>
-  </div>
-</nav>
+<site-nav></site-nav>
 
 <div class="container">
 
@@ -26,45 +16,47 @@
     <h1>I build lightweight infrastructure that respects constraints.</h1>
     <p>Systems engineering. Private infrastructure. Resource discipline as a design principle: minimum overhead, maximum capability. No abstraction without justification.</p>
     <p>Graduating 2026. Based in New Jersey.</p>
-    <div class="status"><span>&#9679;</span> Open to infrastructure and systems engineering roles</div></br>
+    <div class="status"><span>&#9679;</span> Open to infrastructure and systems engineering roles</div>
   </section>
 
   <section id="projects">
     <div class="section-label">Projects</div>
 
-    <div class="project">
+    <a href="https://github.com/UntitledPhases/edge-infrastructure-platform" class="project" target="_blank" rel="noopener">
       <div class="project-header">
         <h3>edge-infrastructure-platform</h3>
         <span class="tag">active</span>
       </div>
       <p>Multi-node network management platform for private infrastructure. Pi control plane running at 5W (always-on), hub compute node that sleeps and wakes via WoL, laptop as operator. Tailscale mesh as trust boundary. RAID1 across 4TB CMR drives with automated nightly backups. No Docker, no K8s, no Nginx. Fundamentals only.</p>
       <div class="stack">python / flask / systemd / tailscale / robocopy / bash</div>
-      <a href="https://github.com/UntitledPhases/edge-infrastructure-platform" class="gh-link">github &rarr;</a>
-    </div>
+    </a>
 
-    <div class="project">
+    <a href="https://github.com/UntitledPhases/SteelBeam" class="project" target="_blank" rel="noopener">
       <div class="project-header">
         <h3>SteelBeam</h3>
         <span class="tag">complete</span>
       </div>
       <p>Game library and catalog web app. 4-person team project where I served as team lead and wrote most of the codebase (111 commits). Built login/registration full stack, session cookie auth, DB schema with bcrypt and CASCADE deletes, library card generation, and led UI rework after user feedback.</p>
       <div class="stack">php / mysql / javascript / rawg api / html / css</div>
-      <a href="https://github.com/UntitledPhases/SteelBeam" class="gh-link">github &rarr;</a>
-    </div>
+    </a>
 
-    <div class="project">
+    <a href="https://github.com/UntitledPhases/gLLove" class="project" target="_blank" rel="noopener">
       <div class="project-header">
         <h3>gLLove</h3>
         <span class="tag">concept</span>
       </div>
       <p>Your data is already collected, sold through brokers, correlated via hardware fingerprinting. None of it is used to help you. gLLove flips the model: centralize your own data, surface cross-app patterns (mood, spending, sleep, screen time), and feed it into an LLM that actually knows you.</p>
       <div class="stack">architecture / readme drafted / repo incoming</div>
-    </div>
+    </a>
   </section>
 
   <section id="blog">
     <div class="section-label">Writing</div>
 
+    <div class="post-entry">
+      <a href="the-missing-layer.html" class="post-title">The missing layer: a conversation with Claude about what AI can't do yet</a>
+      <span class="post-date">Mar 2026</span>
+    </div>
     <div class="post-entry">
       <a href="#" class="post-title">The future of AI: the 'Singularity'</a>
       <span class="post-date">coming soon</span>
@@ -78,7 +70,7 @@
       <span class="post-date">coming soon</span>
     </div>
 
-    <p class="blog-note">Posts will cover various interesting developments in quantum computing, neurotechnology, artificial intelligence, mathematics, and other areas of science.</p></br>
+    <p class="blog-note">Posts will cover various interesting developments in quantum computing, neurotechnology, artificial intelligence, mathematics, and other areas of science.</p>
   </section>
 
   <section id="contact">
@@ -92,9 +84,8 @@
 
 </div>
 
-<footer>
-  <p>built with no framework, as intended</p>
-</footer>
+<site-footer></site-footer>
+<script src="components.js"></script>
 
 </body>
 </html>

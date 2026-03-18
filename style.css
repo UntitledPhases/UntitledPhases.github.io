@@ -6,7 +6,6 @@
 
 :root {
   --bg: #0a0a0a;
-  --surface: #111111;
   --surface-raised: #151515;
   --border: #1a1a1a;
   --border-accent: #252525;
@@ -17,7 +16,7 @@
   --accent: #c8c8c8;
   --link: #a0a0a0;
   --link-hover: #ffffff;
-  --green: #4a7a4a;
+  --green: #5a9e5a;
   --mono: 'IBM Plex Mono', monospace;
   --sans: 'IBM Plex Sans', sans-serif;
 }
@@ -50,6 +49,12 @@ a:hover { color: var(--link-hover); }
   max-width: 720px;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+/* ---- CUSTOM ELEMENTS ---- */
+site-nav,
+site-footer {
+  display: block;
 }
 
 /* ---- NAV ---- */
@@ -92,6 +97,7 @@ nav .links a.active {
   color: var(--text-dim);
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  margin-top: 64px;
   margin-bottom: 24px;
 }
 
@@ -121,13 +127,16 @@ nav .links a.active {
 
 /* ---- PROJECTS (index) ---- */
 .project {
+  display: block;
   border: 1px solid var(--border);
   padding: 28px;
   margin-bottom: 16px;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background 0.2s;
+  color: inherit;
 }
 .project:hover {
-  border-color: var(--border-accent);
+  border-color: var(--border-strong);
+  background: var(--surface-raised);
 }
 .project-header {
   display: flex;
@@ -157,12 +166,6 @@ nav .links a.active {
   font-family: var(--mono);
   font-size: 11px;
   color: var(--text-dim);
-}
-.project .gh-link {
-  font-family: var(--mono);
-  font-size: 12px;
-  display: inline-block;
-  margin-top: 12px;
 }
 
 /* ---- BLOG (index) ---- */
@@ -354,6 +357,81 @@ footer p {
   color: var(--text);
   border-color: var(--border-strong);
   background: var(--surface-raised);
+}
+
+/* ========================================
+   BLOG POST PAGE
+   ======================================== */
+
+.post {
+  padding-bottom: 80px;
+}
+
+.post-header {
+  margin-bottom: 56px;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 24px;
+}
+
+.post-back {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-dim);
+}
+.post-back:hover { color: var(--text-muted); }
+
+
+.post-heading {
+  font-family: var(--sans);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.post-subtitle {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 580px;
+  border-left: 2px solid var(--border-strong);
+  padding-left: 16px;
+  margin-top: 20px;
+}
+
+.post-body h2 {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 52px;
+  margin-bottom: 20px;
+}
+
+.post-body p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  max-width: 660px;
+}
+
+.post-body strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.post-body em {
+  color: var(--text);
+  font-style: italic;
 }
 
 /* ---- RESPONSIVE ---- */
