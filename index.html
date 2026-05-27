@@ -3,78 +3,200 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nojus Liutikas</title>
+<title>Nojus Liutikas — Systems & Agent Harnesses</title>
+<meta name="description" content="Nojus Liutikas builds constrained infrastructure, agent harnesses, and operational systems.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <site-nav></site-nav>
 
-<div class="container">
+<main class="container home-shell">
 
   <section class="hero">
-    <h1>I build lightweight infrastructure that respects constraints.</h1>
-    <p>Systems engineering. Private infrastructure. Resource discipline as a design principle: minimum overhead, maximum capability. No abstraction without justification.</p>
-    <p>Graduating 2026. Based in New Jersey.</p>
-    <div class="status"><span>&#9679;</span> Open to infrastructure and systems engineering roles</div>
+    <div class="hero-copy">
+      <div class="eyebrow">
+        <span class="status-dot"></span>
+        Open to systems, infrastructure, and agentic SDLC roles
+      </div>
+
+      <h1>I build constrained systems for messy real-world operations.</h1>
+
+      <p class="hero-lede">
+        Private infrastructure. Agent harnesses. Operational automation.
+        Resource discipline as a design principle: minimum overhead, maximum capability,
+        no abstraction without justification.
+      </p>
+
+      <div class="hero-actions">
+        <a href="resume.html" class="button primary">view resume</a>
+        <a href="https://github.com/UntitledPhases" class="button" target="_blank" rel="noopener">github</a>
+        <a href="mailto:liutikasnojus@gmail.com" class="button">email</a>
+      </div>
+    </div>
+
+    <aside class="system-panel" aria-label="Systems focus">
+      <div class="panel-header">
+        <span>operating focus</span>
+        <span>NJ · 2026</span>
+      </div>
+
+      <div class="system-module">
+        <div class="module-top">
+          <span>edge infrastructure</span>
+          <span>active</span>
+        </div>
+        <p>Private control plane, sleeping compute, Tailscale boundary, RAID1 storage, automated backups.</p>
+        <div class="meter"><span style="--w: 88%"></span></div>
+      </div>
+
+      <div class="system-module">
+        <div class="module-top">
+          <span>agent harnesses</span>
+          <span>building</span>
+        </div>
+        <p>Scoped context packets, tool policy, evidence trails, handoffs, and backward-pass review loops.</p>
+        <div class="meter"><span style="--w: 72%"></span></div>
+      </div>
+
+      <div class="system-stats">
+        <div>
+          <strong>5W</strong>
+          <span>control plane</span>
+        </div>
+        <div>
+          <strong>RAID1</strong>
+          <span>storage</span>
+        </div>
+        <div>
+          <strong>WoL</strong>
+          <span>compute</span>
+        </div>
+      </div>
+    </aside>
   </section>
 
-  <section id="projects">
-    <div class="section-label">Projects</div>
-
-    <a href="https://github.com/UntitledPhases/edge-infrastructure-platform" class="project" target="_blank" rel="noopener">
-      <div class="project-header">
-        <h3>edge-infrastructure-platform</h3>
-        <span class="tag">active</span>
+  <section id="projects" class="home-section">
+    <div class="section-head">
+      <div>
+        <div class="section-label">Selected work</div>
+        <h2>Infrastructure, automation, and agent systems.</h2>
       </div>
-      <p>Multi-node network management platform for private infrastructure. Pi control plane running at 5W (always-on), hub compute node that sleeps and wakes via WoL, laptop as operator. Tailscale mesh as trust boundary. RAID1 across 4TB CMR drives with automated nightly backups. No Docker, no K8s, no Nginx. Fundamentals only.</p>
-      <div class="stack">python / flask / systemd / tailscale / robocopy / bash</div>
-    </a>
+      <p>
+        Projects are framed as systems: what constraint they solve, what tradeoffs were chosen,
+        and where the failure boundaries live.
+      </p>
+    </div>
 
-    <a href="https://github.com/UntitledPhases/SteelBeam" class="project" target="_blank" rel="noopener">
-      <div class="project-header">
-        <h3>SteelBeam</h3>
-        <span class="tag">complete</span>
-      </div>
-      <p>Game library and catalog web app. 4-person team project where I served as team lead and wrote most of the codebase (111 commits). Built login/registration full stack, session cookie auth, DB schema with bcrypt and CASCADE deletes, library card generation, and led UI rework after user feedback.</p>
-      <div class="stack">php / mysql / javascript / rawg api / html / css</div>
-    </a>
+    <div class="project-grid">
 
-    <a href="https://github.com/UntitledPhases/gLLove" class="project" target="_blank" rel="noopener">
-      <div class="project-header">
-        <h3>gLLove</h3>
-        <span class="tag">concept</span>
-      </div>
-      <p>Your data is already collected, sold through brokers, correlated via hardware fingerprinting. None of it is used to help you. gLLove flips the model: centralize your own data, surface cross-app patterns (mood, spending, sleep, screen time), and feed it into an LLM that actually knows you.</p>
-      <div class="stack">architecture / readme drafted / repo incoming</div>
-    </a>
+      <a href="https://github.com/UntitledPhases/edge-infrastructure-platform" class="project-card" target="_blank" rel="noopener">
+        <div>
+          <div class="project-index">01 / private infrastructure</div>
+          <div class="project-header">
+            <h3>Edge Infrastructure Platform</h3>
+            <span class="tag">active</span>
+          </div>
+          <p>
+            Multi-node private network management platform. Raspberry Pi control plane running at 5W,
+            sleeping compute node woken by WoL, Tailscale mesh as trust boundary, RAID1 storage,
+            and automated backups. Built without Docker, Kubernetes, or Nginx to keep the system legible.
+          </p>
+        </div>
+        <div class="stack">python / flask / systemd / tailscale / bash</div>
+      </a>
+
+      <a href="https://github.com/UntitledPhases/workpath" class="project-card" target="_blank" rel="noopener">
+        <div>
+          <div class="project-index">02 / agent workflow layer</div>
+          <div class="project-header">
+            <h3>Workpath</h3>
+            <span class="tag">prototype</span>
+          </div>
+          <p>
+            Local-first structured SOP composer for AI work nodes. Compiles workflow graphs into
+            agent packets, operator instructions, context/tool policy files, and evidence bundles.
+            Built around scoped context, handoffs, review gates, and backward-pass feedback.
+          </p>
+        </div>
+        <div class="stack">react / workflow compiler / json / agentic sdlc</div>
+      </a>
+
+      <a href="https://github.com/UntitledPhases/PhishGuard" class="project-card" target="_blank" rel="noopener">
+        <div>
+          <div class="project-index">03 / security ux</div>
+          <div class="project-header">
+            <h3>PhishGuard</h3>
+            <span class="tag">prototype</span>
+          </div>
+          <p>
+            Desktop-first interactive phishing triage prototype. Helps non-experts inspect suspicious
+            messages through clearer evidence, safer interpretation, and less security jargon.
+          </p>
+        </div>
+        <div class="stack">html / css / javascript / security ux</div>
+      </a>
+
+      <a href="https://github.com/UntitledPhases/SteelBeam" class="project-card" target="_blank" rel="noopener">
+        <div>
+          <div class="project-index">04 / full-stack web app</div>
+          <div class="project-header">
+            <h3>SteelBeam</h3>
+            <span class="tag">complete</span>
+          </div>
+          <p>
+            Game library and catalog web app. Team project where I served as lead and wrote most
+            of the codebase. Built auth, sessions, database schema, library card generation,
+            and UI revisions after feedback.
+          </p>
+        </div>
+        <div class="stack">php / mysql / javascript / rawg api</div>
+      </a>
+
+    </div>
   </section>
 
-  <section id="blog">
-    <div class="section-label">Writing</div>
-
-    <div class="post-entry">
-      <a href="the-missing-layer.html" class="post-title">The missing layer: a conversation with Claude about what AI can't do yet</a>
-      <span class="post-date">Mar 2026</span>
-    </div>
-    <div class="post-entry">
-      <a href="#" class="post-title">The future of AI: the 'Singularity'</a>
-      <span class="post-date">coming soon</span>
-    </div>
-    <div class="post-entry">
-      <a href="#" class="post-title">Is coding still worth it?</a>
-      <span class="post-date">coming soon</span>
-    </div>
-    <div class="post-entry">
-      <a href="#" class="post-title">How similar are human brains and neural networks?</a>
-      <span class="post-date">coming soon</span>
+  <section id="blog" class="home-section">
+    <div class="section-head">
+      <div>
+        <div class="section-label">Writing</div>
+        <h2>Notes on AI, systems, and missing control layers.</h2>
+      </div>
     </div>
 
-    <p class="blog-note">Posts will cover various interesting developments in quantum computing, neurotechnology, artificial intelligence, mathematics, and other areas of science.</p>
+    <div class="writing-list">
+      <a href="the-missing-layer.html" class="writing-item">
+        <span>The missing layer: a conversation with Claude about what AI can't do yet</span>
+        <em>Mar 2026</em>
+      </a>
+
+      <a href="#" class="writing-item">
+        <span>Code as agent harness</span>
+        <em>drafting</em>
+      </a>
+
+      <a href="#" class="writing-item">
+        <span>The future of AI: the 'Singularity'</span>
+        <em>coming soon</em>
+      </a>
+    </div>
+
+    <p class="blog-note">
+      Posts cover AI systems, infrastructure, mathematics, neurotechnology,
+      and the practical control layers missing from current tooling.
+    </p>
   </section>
 
-  <section id="contact">
-    <div class="section-label">Contact</div>
+  <section id="contact" class="home-section contact-panel">
+    <div>
+      <div class="section-label">Contact</div>
+      <h2>Available for infrastructure and systems work.</h2>
+      <p>
+        Graduating 2026. Based in New Jersey. Strongest fit: systems/infrastructure engineering,
+        operational automation, agentic SDLC workflows, and technical glue roles.
+      </p>
+    </div>
+
     <div class="contact-links">
       <a href="https://github.com/UntitledPhases">github</a>
       <a href="mailto:liutikasnojus@gmail.com">email</a>
@@ -82,7 +204,7 @@
     </div>
   </section>
 
-</div>
+</main>
 
 <site-footer></site-footer>
 <script src="components.js"></script>
