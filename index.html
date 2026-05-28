@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nojus Liutikas — Systems & Agent Harnesses</title>
-<meta name="description" content="Nojus Liutikas builds constrained infrastructure, agent harnesses, and operational systems.">
+<meta name="description" content="Nojus Liutikas builds constrained infrastructure, agent harnesses, and operational systems for messy real-world operations.">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="landing.css">
 </head>
 <body>
 
@@ -13,154 +14,152 @@
 
 <main class="container home-shell">
 
-  <section class="hero">
-    <div class="hero-copy">
-      <div class="eyebrow">
-        <span class="status-dot"></span>
-        Open to systems, infrastructure, and agentic SDLC roles
-      </div>
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="hero-kicker">Systems · Infrastructure · Agentic SDLC</p>
 
-      <h1>I build constrained systems for messy real-world operations.</h1>
+    <h1 id="hero-title">Constrained systems for messy real-world operations.</h1>
 
-      <p class="hero-lede">
-        Private infrastructure. Agent harnesses. Operational automation.
-        Resource discipline as a design principle: minimum overhead, maximum capability,
-        no abstraction without justification.
-      </p>
+    <p class="hero-lede">
+      I build private infrastructure, operational automation, and agent workflow harnesses
+      around scoped context, tool policy, evidence loops, and resource discipline.
+    </p>
 
-      <div class="hero-actions">
-        <a href="resume.html" class="button primary">view resume</a>
-        <a href="https://github.com/UntitledPhases" class="button" target="_blank" rel="noopener">github</a>
-        <a href="mailto:liutikasnojus@gmail.com" class="button">email</a>
-      </div>
+    <div class="hero-actions" aria-label="Primary links">
+      <a href="resume.html">Resume</a>
+      <a href="https://github.com/UntitledPhases" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:liutikasnojus@gmail.com">Email</a>
     </div>
-
-    <aside class="system-panel" aria-label="Systems focus">
-      <div class="panel-header">
-        <span>operating focus</span>
-        <span>NJ · 2026</span>
-      </div>
-
-      <div class="system-module">
-        <div class="module-top">
-          <span>edge infrastructure</span>
-          <span>active</span>
-        </div>
-        <p>Private control plane, sleeping compute, Tailscale boundary, RAID1 storage, automated backups.</p>
-        <div class="meter"><span style="--w: 88%"></span></div>
-      </div>
-
-      <div class="system-module">
-        <div class="module-top">
-          <span>agent harnesses</span>
-          <span>building</span>
-        </div>
-        <p>Scoped context packets, tool policy, evidence trails, handoffs, and backward-pass review loops.</p>
-        <div class="meter"><span style="--w: 72%"></span></div>
-      </div>
-
-      <div class="system-stats">
-        <div>
-          <strong>5W</strong>
-          <span>control plane</span>
-        </div>
-        <div>
-          <strong>RAID1</strong>
-          <span>storage</span>
-        </div>
-        <div>
-          <strong>WoL</strong>
-          <span>compute</span>
-        </div>
-      </div>
-    </aside>
   </section>
 
-  <section id="projects" class="home-section">
+  <section class="principles" aria-labelledby="principles-title">
+    <div class="section-label" id="principles-title">Operating principles</div>
+    <div class="principles-grid">
+      <p><span>01</span> Keep systems legible.</p>
+      <p><span>02</span> Scope context before execution.</p>
+      <p><span>03</span> Justify every abstraction.</p>
+      <p><span>04</span> Preserve evidence across handoffs.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="home-section selected-work">
     <div class="section-head">
       <div>
         <div class="section-label">Selected work</div>
-        <h2>Infrastructure, automation, and agent systems.</h2>
+        <h2>Systems framed by constraints, tradeoffs, and operational evidence.</h2>
       </div>
       <p>
-        Projects are framed as systems: what constraint they solve, what tradeoffs were chosen,
-        and where the failure boundaries live.
+        These are not decorative demos. Each project is shaped around a real boundary:
+        power, context, trust, handoff quality, or user interpretation under uncertainty.
       </p>
     </div>
 
-    <div class="project-grid">
+    <div class="project-list">
+      <article class="project-entry featured-project">
+        <div class="project-meta">
+          <span>01</span>
+          <span>private infrastructure</span>
+        </div>
 
-      <a href="https://github.com/UntitledPhases/edge-infrastructure-platform" class="project-card" target="_blank" rel="noopener">
-        <div>
-          <div class="project-index">01 / private infrastructure</div>
-          <div class="project-header">
+        <div class="project-content">
+          <div class="project-heading">
             <h3>Edge Infrastructure Platform</h3>
-            <span class="tag">active</span>
+            <a href="https://github.com/UntitledPhases/edge-infrastructure-platform" target="_blank" rel="noopener">Repository</a>
           </div>
-          <p>
-            Multi-node private network management platform. Raspberry Pi control plane running at 5W,
-            sleeping compute node woken by WoL, Tailscale mesh as trust boundary, RAID1 storage,
-            and automated backups. Built without Docker, Kubernetes, or Nginx to keep the system legible.
-          </p>
-        </div>
-        <div class="stack">python / flask / systemd / tailscale / bash</div>
-      </a>
 
-      <a href="https://github.com/UntitledPhases/workpath" class="project-card" target="_blank" rel="noopener">
-        <div>
-          <div class="project-index">02 / agent workflow layer</div>
-          <div class="project-header">
+          <p class="project-thesis">
+            Multi-node private infrastructure designed for low idle cost, private access,
+            recoverable storage, and direct operational control.
+          </p>
+
+          <dl class="project-facts">
+            <div>
+              <dt>Constraint</dt>
+              <dd>Always-on coordination had to stay cheap and legible while heavier compute slept until needed.</dd>
+            </div>
+            <div>
+              <dt>Built</dt>
+              <dd>Raspberry Pi control plane, Wake-on-LAN compute orchestration, Tailscale mesh, RAID1 storage, and automated backups.</dd>
+            </div>
+            <div>
+              <dt>Omitted</dt>
+              <dd>No Docker, Kubernetes, or Nginx where the abstraction cost did not justify itself.</dd>
+            </div>
+          </dl>
+
+          <p class="project-stack">python / flask / systemd / tailscale / bash</p>
+        </div>
+      </article>
+
+      <article class="project-entry major-project">
+        <div class="project-meta">
+          <span>02</span>
+          <span>agent workflow layer</span>
+        </div>
+
+        <div class="project-content">
+          <div class="project-heading">
             <h3>Workpath</h3>
-            <span class="tag">prototype</span>
+            <a href="https://github.com/UntitledPhases/workpath" target="_blank" rel="noopener">Repository</a>
           </div>
-          <p>
-            Local-first structured SOP composer for AI work nodes. Compiles workflow graphs into
-            agent packets, operator instructions, context/tool policy files, and evidence bundles.
-            Built around scoped context, handoffs, review gates, and backward-pass feedback.
-          </p>
-        </div>
-        <div class="stack">react / workflow compiler / json / agentic sdlc</div>
-      </a>
 
-      <a href="https://github.com/UntitledPhases/PhishGuard" class="project-card" target="_blank" rel="noopener">
-        <div>
-          <div class="project-index">03 / security ux</div>
-          <div class="project-header">
-            <h3>PhishGuard</h3>
-            <span class="tag">prototype</span>
+          <p class="project-thesis">
+            Local-first structured SOP composer that turns loose operator intent into scoped execution packets for AI work nodes.
+          </p>
+
+          <dl class="project-facts compact">
+            <div>
+              <dt>Compiled output</dt>
+              <dd>Workflow graphs, operator instructions, context/tool policy files, and evidence bundles.</dd>
+            </div>
+            <div>
+              <dt>Control model</dt>
+              <dd>Scoped context, explicit handoffs, review gates, and backward-pass feedback.</dd>
+            </div>
+          </dl>
+
+          <p class="project-stack">react / workflow compiler / json / agentic sdlc</p>
+        </div>
+      </article>
+
+      <div class="secondary-projects" aria-label="Additional projects">
+        <article class="secondary-project">
+          <div class="project-meta">
+            <span>03</span>
+            <span>security ux</span>
           </div>
-          <p>
-            Desktop-first interactive phishing triage prototype. Helps non-experts inspect suspicious
-            messages through clearer evidence, safer interpretation, and less security jargon.
-          </p>
-        </div>
-        <div class="stack">html / css / javascript / security ux</div>
-      </a>
-
-      <a href="https://github.com/UntitledPhases/SteelBeam" class="project-card" target="_blank" rel="noopener">
-        <div>
-          <div class="project-index">04 / full-stack web app</div>
-          <div class="project-header">
-            <h3>SteelBeam</h3>
-            <span class="tag">complete</span>
+          <div>
+            <div class="project-heading small-heading">
+              <h3>PhishGuard</h3>
+              <a href="https://github.com/UntitledPhases/PhishGuard" target="_blank" rel="noopener">Repository</a>
+            </div>
+            <p>Desktop-first phishing triage prototype that helps non-experts inspect suspicious messages through clearer evidence and safer interpretation.</p>
+            <p class="project-stack">html / css / javascript / security ux</p>
           </div>
-          <p>
-            Game library and catalog web app. Team project where I served as lead and wrote most
-            of the codebase. Built auth, sessions, database schema, library card generation,
-            and UI revisions after feedback.
-          </p>
-        </div>
-        <div class="stack">php / mysql / javascript / rawg api</div>
-      </a>
+        </article>
 
+        <article class="secondary-project">
+          <div class="project-meta">
+            <span>04</span>
+            <span>full-stack web app</span>
+          </div>
+          <div>
+            <div class="project-heading small-heading">
+              <h3>SteelBeam</h3>
+              <a href="https://github.com/UntitledPhases/SteelBeam" target="_blank" rel="noopener">Repository</a>
+            </div>
+            <p>Game library and catalog web app. Team lead role across auth, sessions, database schema, library UI, and revision cycles after feedback.</p>
+            <p class="project-stack">php / mysql / javascript / rawg api</p>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section id="blog" class="home-section">
-    <div class="section-head">
+  <section id="blog" class="home-section writing-section">
+    <div class="section-head compact-head">
       <div>
         <div class="section-label">Writing</div>
-        <h2>Notes on AI, systems, and missing control layers.</h2>
+        <h2>Notes on AI systems and missing control layers.</h2>
       </div>
     </div>
 
@@ -170,37 +169,28 @@
         <em>Mar 2026</em>
       </a>
 
-      <a href="#" class="writing-item">
+      <a href="#" class="writing-item muted-item" aria-disabled="true">
         <span>Code as agent harness</span>
         <em>drafting</em>
       </a>
-
-      <a href="#" class="writing-item">
-        <span>The future of AI: the 'Singularity'</span>
-        <em>coming soon</em>
-      </a>
     </div>
-
-    <p class="blog-note">
-      Posts cover AI systems, infrastructure, mathematics, neurotechnology,
-      and the practical control layers missing from current tooling.
-    </p>
   </section>
 
   <section id="contact" class="home-section contact-panel">
     <div>
       <div class="section-label">Contact</div>
-      <h2>Available for infrastructure and systems work.</h2>
+      <h2>Available for systems, infrastructure, automation, and technical glue roles.</h2>
       <p>
-        Graduating 2026. Based in New Jersey. Strongest fit: systems/infrastructure engineering,
-        operational automation, agentic SDLC workflows, and technical glue roles.
+        Graduating 2026. Based in New Jersey. Strongest fit: practical systems work where
+        fragmented operations need clearer tools, safer workflows, and better control loops.
       </p>
     </div>
 
-    <div class="contact-links">
-      <a href="https://github.com/UntitledPhases">github</a>
-      <a href="mailto:liutikasnojus@gmail.com">email</a>
-      <a href="https://www.linkedin.com/in/nojus-liutikas-5803b0210/">linkedin</a>
+    <div class="contact-links" aria-label="Contact links">
+      <a href="https://github.com/UntitledPhases" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:liutikasnojus@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/nojus-liutikas-5803b0210/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="resume.html">Resume</a>
     </div>
   </section>
 
