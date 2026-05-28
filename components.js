@@ -5,13 +5,6 @@ class SiteNav extends HTMLElement {
     const isResume = path.endsWith('resume.html');
     const isWriting = !isHome && !isResume;
 
-    if (isHome && !document.querySelector('link[href="landing.css"]')) {
-      const landingStyles = document.createElement('link');
-      landingStyles.rel = 'stylesheet';
-      landingStyles.href = 'landing.css';
-      document.head.appendChild(landingStyles);
-    }
-
     this.innerHTML = `
       <nav>
         <div class="container">
