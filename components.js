@@ -1,8 +1,16 @@
 class SiteNav extends HTMLElement {
   connectedCallback() {
     const path = window.location.pathname;
+    const isHome = path.endsWith('index.html') || path.endsWith('/');
     const isResume = path.endsWith('resume.html');
-    const isWriting = !path.endsWith('index.html') && !path.endsWith('/') && !isResume;
+    const isWriting = !isHome && !isResume;
+
+    if (isHome && !document.querySelector('link[href="landing.css"]')) {
+      const landingStyles = document.createElement('link');
+      landingStyles.rel = 'stylesheet';
+      landingStyles.href = 'landing.css';
+      document.head.appendChild(landingStyles);
+    }
 
     this.innerHTML = `
       <nav>
