@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <p class="resume-summary">Systems-oriented IT student who builds lightweight infrastructure under real constraints. Hands-on with networking, Linux administration, and multi-node system design. Seeking infrastructure, systems, or platform engineering roles where fundamentals matter more than abstractions.</p>
+  <p class="resume-summary">Applied AI and systems engineer focused on the deployment side of AI: the tools, workflows, integrations, and infrastructure that turn frontier models into usable operations. B.S. Information Technology graduate with a mathematics minor, currently leading a small-business AI and M365 rollout while building agent infrastructure projects including Workpath and EIP.</p>
 
   <!-- EDUCATION -->
   <div class="resume-section">
@@ -31,12 +31,12 @@
     <div class="resume-entry">
       <div class="resume-entry-header">
         <h3>Montclair State University</h3>
-        <span class="date">Expected May 2026</span>
+        <span class="date">May 2026</span>
       </div>
-      <div class="subtitle">B.S. Information Technology, Minor in Mathematics &middot; GPA: 3.2</div>
+      <div class="subtitle">B.S. Information Technology, Minor in Mathematics &middot; Overall GPA: 3.30 &middot; Major GPA: 3.40</div>
       <ul>
-        <li>Coursework: Network Security, System Administration, Infrastructure Design, Software Engineering, Internet Computing</li>
-        <li>Labs: DNS (BIND), IDS (Snort), Apache virtual hosting, Cisco Packet Tracer, buffer overflow exploit analysis</li>
+        <li>Coursework: Artificial Intelligence, Computer Networks, Computer Security, Database Systems, Data Structures & Algorithms, Internet Computing, Systems Programming</li>
+        <li>Capstone labs: DNS, firewall configuration, site-to-site VPN, subnetting, VLANs, and switch trunk routing in Cisco Packet Tracer</li>
       </ul>
     </div>
   </div>
@@ -47,38 +47,27 @@
 
     <div class="resume-entry">
       <div class="resume-entry-header">
+        <h3>Workpath</h3>
+        <span class="date">2025 - Present</span>
+      </div>
+      <div class="subtitle">Agent workflow control layer &middot; <a href="https://github.com/UntitledPhases/workpath">github.com/UntitledPhases/workpath</a></div>
+      <ul>
+        <li>Built a local-first SOP composer that turns operator intent into scoped execution packets for AI work nodes.</li>
+        <li>Compiled workflow graphs into operator instructions, context/tool policy files, and audit/evidence bundles.</li>
+        <li>Designed for inspectable handoffs, review gates, and customer-facing explanations of agent decisions.</li>
+      </ul>
+    </div>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
         <h3>Edge Infrastructure Platform (EIP)</h3>
         <span class="date">2025 - Present</span>
       </div>
-      <div class="subtitle">Personal Project &middot; <a href="https://github.com/UntitledPhases/edge-infrastructure-platform">github.com/UntitledPhases/edge-infrastructure-platform</a></div>
+      <div class="subtitle">Private infrastructure control plane &middot; <a href="https://github.com/UntitledPhases/edge-infrastructure-platform">github.com/UntitledPhases/edge-infrastructure-platform</a></div>
       <ul>
-        <li>Built multi-node private infrastructure: Pi control plane (5W, always-on), hub compute node via WoL, laptop operator.</li>
-        <li>Tailscale mesh VPN as trust boundary with MagicDNS. SSH/RDP remote access via MobaXterm across all nodes.</li>
-        <li>Flask API for host management deployed as systemd services. RAID1 on 4TB CMR drives, automated nightly backups.</li>
-        <li>Design principles: resource discipline (min overhead, max capability), CIA triad, fundamentals-first.</li>
-      </ul>
-    </div>
-
-    <div class="resume-entry">
-      <div class="resume-entry-header">
-        <h3>SteelBeam - Team Lead</h3>
-        <span class="date">2025</span>
-      </div>
-      <div class="subtitle">Internet Computing Course &middot; <a href="https://github.com/UntitledPhases/SteelBeam">github.com/UntitledPhases/SteelBeam</a></div>
-      <ul>
-        <li>Led 4-person team building full-stack game library app. Wrote majority of codebase.</li>
-        <li>Owned auth (session cookies, bcrypt), DB schema (CASCADE deletes, ENUM fields), RAWG API integration, UI iteration.</li>
-      </ul>
-    </div>
-
-    <div class="resume-entry">
-      <div class="resume-entry-header">
-        <h3>DDoS Simulation and Mitigation</h3>
-        <span class="date">2024</span>
-      </div>
-      <div class="subtitle">Computer Networks Final Project</div>
-      <ul>
-        <li>Built HTTP flood, amplification, and Slowloris simulations. Documented vectors and mitigation strategies.</li>
+        <li>Built a self-hosted substrate for personal compute and agent workloads: Raspberry Pi control plane, hub compute via Wake-on-LAN, and laptop operator.</li>
+        <li>Used Tailscale mesh VPN as the trust boundary with MagicDNS, SSH/RDP access, Flask APIs as systemd services, RAID1 storage, and nightly backups.</li>
+        <li>Kept the design resource-disciplined: no Docker, Kubernetes, or reverse proxy where the workload did not justify the abstraction cost.</li>
       </ul>
     </div>
   </div>
@@ -89,13 +78,26 @@
 
     <div class="resume-entry">
       <div class="resume-entry-header">
+        <h3>IT & Operations Lead</h3>
+        <span class="date">Aug 2024 - Present</span>
+      </div>
+      <div class="subtitle">Ramas Climate & Refrigeration LLC, Livingston, NJ</div>
+      <ul>
+        <li>Deploying Claude-based AI workflows into a non-technical operations team, including scoping, staff enablement, support, and workflow fit.</li>
+        <li>Architected Microsoft 365 tenant from scratch: business migration, role-based access control, scoped user accounts, workstation migration, and shared file structure.</li>
+        <li>Consolidating fragmented customer-facing systems across Wix, IONOS, and Google Business Profile into a cleaner operations layer.</li>
+      </ul>
+    </div>
+
+    <div class="resume-entry">
+      <div class="resume-entry-header">
         <h3>Development Manager</h3>
         <span class="date">May 2022 - Aug 2024</span>
       </div>
       <div class="subtitle">Ramas Climate & Refrigeration LLC, Livingston, NJ</div>
       <ul>
-        <li>Led digital tool adoption for service tracking. Configured Windows domain, email, and access controls for office network.</li>
-        <li>Built technical training modules for field staff on new systems and equipment.</li>
+        <li>Led adoption of digital tools and operational systems across field and office staff.</li>
+        <li>Maintained the company's IT environment across Windows domain, email, shared drives, and access controls.</li>
       </ul>
     </div>
 
@@ -106,18 +108,7 @@
       </div>
       <div class="subtitle">Ramas Climate & Refrigeration LLC, Livingston, NJ</div>
       <ul>
-        <li>Diagnosed/repaired residential and industrial HVAC and building automation systems. Managed sites, EPA compliance.</li>
-      </ul>
-    </div>
-
-    <div class="resume-entry">
-      <div class="resume-entry-header">
-        <h3>Account Executive</h3>
-        <span class="date">Sept 2021 - May 2022</span>
-      </div>
-      <div class="subtitle">Phoenician International Inc., Hoboken, NJ</div>
-      <ul>
-        <li>Managed 20+ client accounts. Designed campaigns increasing product exposure and engagement.</li>
+        <li>Diagnosed and repaired residential and industrial HVAC systems, including Building Automation Systems on commercial sites.</li>
       </ul>
     </div>
   </div>
@@ -127,17 +118,17 @@
     <div class="resume-section-title">Skills</div>
 
     <div class="skills-grid">
-      <span class="label">Languages</span>
-      <span class="value">Python, Java, C, SQL, Bash, HTML/CSS, JavaScript, PHP</span>
+      <span class="label">AI Engineering</span>
+      <span class="value">LLM application development, agent deployment, prompt engineering, evals, structured outputs/tool use, MCP, RAG, local inference</span>
 
       <span class="label">Infrastructure</span>
-      <span class="value">Linux admin (Debian/Ubuntu/RPi OS), Windows Server/AD, systemd, Flask, Git, RAID</span>
+      <span class="value">Linux, WSL, Microsoft 365 Administration, Entra ID, Active Directory, systemd, Flask, Git, RAID</span>
 
       <span class="label">Networking</span>
-      <span class="value">TCP/IP, DNS, DHCP, VLANs, firewall rules/ACLs, VPN (Tailscale), WoL, Wireshark, SSH/RDP (MobaXterm)</span>
+      <span class="value">TCP/IP, DNS, VLANs, firewalls, VPN (Tailscale), Wake-on-LAN, SSH/RDP</span>
 
-      <span class="label">Security</span>
-      <span class="value">IDS (Snort), packet analysis, access control config, exploit analysis</span>
+      <span class="label">Languages</span>
+      <span class="value">Python, Java, C, SQL, Bash, JavaScript, PHP, HTML/CSS</span>
 
       <span class="label">Certs</span>
       <span class="value">CompTIA ITF+, EPA 608</span>
