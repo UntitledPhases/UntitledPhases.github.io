@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <p class="resume-summary">Applied AI and systems engineer focused on the deployment side of AI: the tools, workflows, integrations, and infrastructure that turn frontier models into usable operations. B.S. Information Technology graduate with a mathematics minor, currently leading a small-business AI and M365 rollout while building agent infrastructure projects including Workpath and EIP.</p>
+  <p class="resume-summary">Applied AI engineer focused on the deployment side of AI: the tools, workflows, and integrations that turn frontier models into real systems. IT graduate with a mathematics minor currently leading a small-business AI rollout end-to-end, with a side portfolio of self-built agent infrastructure including Workpath and EIP.</p>
 
   <!-- EDUCATION -->
   <div class="resume-section">
@@ -48,13 +48,13 @@
     <div class="resume-entry">
       <div class="resume-entry-header">
         <h3>Workpath</h3>
-        <span class="date">2025 - Present</span>
+        <span class="date">May 2026 - Present</span>
       </div>
       <div class="subtitle">Agent workflow control layer &middot; <a href="https://github.com/UntitledPhases/workpath">github.com/UntitledPhases/workpath</a></div>
       <ul>
-        <li>Built a local-first SOP composer that turns operator intent into scoped execution packets for AI work nodes.</li>
-        <li>Compiled workflow graphs into operator instructions, context/tool policy files, and audit/evidence bundles.</li>
-        <li>Designed for inspectable handoffs, review gates, and customer-facing explanations of agent decisions.</li>
+        <li>Built a control-plane tool for deploying agentic workflows: authors define the exact SOP an agent follows, including subagent fan-out, reasoning budget, handoff points, and conditional gates.</li>
+        <li>Compiled visual workflow graphs into structured agent packets with operator instructions, context pack, tool policy, and schema-validated audit JSONL.</li>
+        <li>Designed for customer-facing audit: every decision point is inspectable with evidence records, so operators can answer why an agent took a path in production.</li>
       </ul>
     </div>
 
@@ -65,9 +65,9 @@
       </div>
       <div class="subtitle">Private infrastructure control plane &middot; <a href="https://github.com/UntitledPhases/edge-infrastructure-platform">github.com/UntitledPhases/edge-infrastructure-platform</a></div>
       <ul>
-        <li>Built a self-hosted substrate for personal compute and agent workloads: Raspberry Pi control plane, hub compute via Wake-on-LAN, and laptop operator.</li>
-        <li>Used Tailscale mesh VPN as the trust boundary with MagicDNS, SSH/RDP access, Flask APIs as systemd services, RAID1 storage, and nightly backups.</li>
-        <li>Kept the design resource-disciplined: no Docker, Kubernetes, or reverse proxy where the workload did not justify the abstraction cost.</li>
+        <li>Engineered a self-hosted compute substrate for personal AI workloads: Raspberry Pi control plane, hub compute node via Wake-on-LAN, and laptop operator.</li>
+        <li>Used Tailscale mesh VPN with MagicDNS as the trust boundary; deployed Flask APIs as systemd services with RAID1 storage and nightly backups.</li>
+        <li>Anchored the design in CIA-triad fundamentals and resource discipline, avoiding orchestration overhead the workload did not justify.</li>
       </ul>
     </div>
   </div>
@@ -83,9 +83,9 @@
       </div>
       <div class="subtitle">Ramas Climate & Refrigeration LLC, Livingston, NJ</div>
       <ul>
-        <li>Deploying Claude-based AI workflows into a non-technical operations team, including scoping, staff enablement, support, and workflow fit.</li>
-        <li>Architected Microsoft 365 tenant from scratch: business migration, role-based access control, scoped user accounts, workstation migration, and shared file structure.</li>
-        <li>Consolidating fragmented customer-facing systems across Wix, IONOS, and Google Business Profile into a cleaner operations layer.</li>
+        <li>Deployed Claude-based AI workflows across a 7-person company: office, foreman, and four field techs new to LLMs.</li>
+        <li>Architected the Microsoft 365 tenant from scratch, including RBAC, workstation migration, and shared file structure, ending file overwrites from a shared personal OneDrive.</li>
+        <li>Consolidated fragmented customer-facing surfaces across Wix, IONOS, and Google Business Profile; cut a duplicate domain at about $400/year and replaced an outside web developer by building the site in Wix via Claude.</li>
       </ul>
     </div>
 
@@ -119,7 +119,7 @@
 
     <div class="skills-grid">
       <span class="label">AI Engineering</span>
-      <span class="value">LLM application development, agent deployment, prompt engineering, evals, structured outputs/tool use, MCP, RAG, local inference</span>
+      <span class="value">Context/tool/permission scoping, multi-agent orchestration, Anthropic/OpenAI platforms, LM Studio</span>
 
       <span class="label">Infrastructure</span>
       <span class="value">Linux, WSL, Microsoft 365 Administration, Entra ID, Active Directory, systemd, Flask, Git, RAID</span>
@@ -129,6 +129,9 @@
 
       <span class="label">Languages</span>
       <span class="value">Python, Java, C, SQL, Bash, JavaScript, PHP, HTML/CSS</span>
+
+      <span class="label">Containers</span>
+      <span class="value">Docker, Podman, Kubernetes, Jenkins</span>
 
       <span class="label">Certs</span>
       <span class="value">CompTIA ITF+, EPA 608</span>
