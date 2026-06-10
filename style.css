@@ -102,10 +102,21 @@ nav {
   z-index: 2;
 }
 
+.nav-mark {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
 nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 nav .name {
@@ -120,12 +131,7 @@ nav .name {
 }
 
 nav .name::before {
-  content: "";
-  width: 9px;
-  height: 9px;
-  border-radius: 999px;
-  background: var(--green);
-  box-shadow: 0 0 26px rgba(126, 240, 161, 0.7);
+  display: none;
 }
 
 nav .links {

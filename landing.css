@@ -20,7 +20,7 @@ body::before {
 }
 
 nav {
-  padding: 34px 0 98px;
+  padding: 34px 0 56px;
 }
 
 nav .name::before {
@@ -39,7 +39,7 @@ nav .links a {
 .hero {
   display: block;
   max-width: 980px;
-  padding-bottom: 132px;
+  padding-bottom: 60px;
 }
 
 .hero-kicker,
@@ -99,16 +99,21 @@ nav .links a {
   border-color: var(--text);
 }
 
-.principles,
+.principles {
+  border-top: 0;
+  padding: 0 0 64px;
+}
+
+.principles::before {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-bottom: 28px;
+  background: linear-gradient(90deg, var(--border) 0%, rgba(255, 255, 255, 0.07) 58%, transparent 100%);
+}
+
 .home-section {
   border-top: 1px solid var(--border);
-}
-
-.principles {
-  padding: 28px 0 118px;
-}
-
-.home-section {
   padding: 112px 0;
 }
 
@@ -146,23 +151,16 @@ nav .links a {
 .principles-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  gap: 34px 44px;
 }
 
 .principles-grid p {
-  min-height: 138px;
-  padding: 22px 22px 20px 0;
-  border-right: 1px solid var(--border);
+  min-height: 112px;
+  padding: 0;
   color: var(--text);
   font-size: 18px;
   line-height: 1.35;
   letter-spacing: -0.02em;
-}
-
-.principles-grid p:last-child {
-  border-right: 0;
 }
 
 .principles-grid span {
@@ -171,7 +169,17 @@ nav .links a {
   font-size: 11px;
   color: var(--text-dim);
   letter-spacing: 0.12em;
-  margin-bottom: 34px;
+  margin-bottom: 22px;
+}
+
+.principles-grid span::after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 7px;
+  margin-top: 18px;
+  opacity: 0.62;
+  background: url("data:image/svg+xml,%3Csvg width='58' height='7' viewBox='0 0 58 7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4 C5 1 9 1 13 4 S21 7 25 4 S33 1 37 4 S45 7 49 4 S55 1 57 3.5' fill='none' stroke='%238a8a83' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E") left center / 58px 7px no-repeat;
 }
 
 .project-list {
@@ -269,7 +277,7 @@ nav .links a {
 }
 
 .project-facts dd,
-.secondary-project p {
+.secondary-project p:not(.project-stack) {
   color: var(--text-muted);
   font-size: 15px;
   line-height: 1.65;
@@ -337,27 +345,20 @@ nav .links a {
 
 @media (max-width: 900px) {
   nav {
-    padding-bottom: 70px;
+    padding-bottom: 48px;
   }
 
   .hero {
-    padding-bottom: 96px;
+    padding-bottom: 52px;
   }
 
   .principles {
-    padding-bottom: 92px;
+    padding-bottom: 64px;
   }
 
   .principles-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .principles-grid p:nth-child(2) {
-    border-right: 0;
-  }
-
-  .principles-grid p:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--border);
+    gap: 34px 48px;
   }
 
   .section-head,
@@ -396,7 +397,7 @@ nav .links a {
 
   nav {
     padding-top: 24px;
-    padding-bottom: 62px;
+    padding-bottom: 40px;
   }
 
   .hero h1 {
@@ -409,23 +410,18 @@ nav .links a {
   }
 
   .principles {
-    padding: 24px 0 82px;
+    padding: 24px 0 56px;
   }
 
   .principles-grid {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .principles-grid p,
   .principles-grid p:nth-child(2) {
-    min-height: 112px;
-    border-right: 0;
-    border-bottom: 1px solid var(--border);
-    padding-right: 0;
-  }
-
-  .principles-grid p:last-child {
-    border-bottom: 0;
+    min-height: auto;
+    padding: 0;
   }
 
   .project-entry {

@@ -3,148 +3,221 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resume - Nojus Liutikas</title>
-<link rel="stylesheet" href="style.css">
+<title>Nojus Liutikas — Résumé</title>
+<link rel="stylesheet" href="editorial.css?v=4">
 </head>
 <body>
+<div class="app">
 
-<site-nav></site-nav>
-
-<div class="container">
-
-  <div class="resume-header">
-    <!-- DOWNLOAD -->
-  <a href="https://raw.githubusercontent.com/UntitledPhases/UntitledPhases.github.io/main/Nojus_Liutikas_Resume.pdf" class="resume-download">Download Resume (pdf)</a>
-    <h1>Nojus Liutikas</h1>
-    <div class="meta">
-      Livingston, NJ 07039<br>
-      <a href="mailto:liutikasnojus@gmail.com">liutikasnojus@gmail.com</a> &middot; <a href="https://github.com/UntitledPhases">github.com/UntitledPhases</a>
-    </div>
-  </div>
-
-  <p class="resume-summary">Applied AI engineer focused on the deployment side of AI: the tools, workflows, and integrations that turn frontier models into real systems. IT graduate with a mathematics minor currently leading a small-business AI rollout end-to-end, with a side portfolio of self-built agent infrastructure including Workpath and EIP.</p>
-
-  <!-- EDUCATION -->
-  <div class="resume-section">
-    <div class="resume-section-title">Education</div>
-
-    <div class="resume-entry">
-      <div class="resume-entry-header">
-        <h3>Montclair State University</h3>
-        <span class="date">May 2026</span>
+  <nav>
+    <canvas class="nav-mark" aria-hidden="true"></canvas>
+    <div class="container">
+      <a class="brand" href="index.html">nojus liutikas</a>
+      <div class="nav-links">
+        <a href="index.html#projects">projects</a>
+        <a href="index.html#blog">writing</a>
+        <a class="active" href="resume.html">resume</a>
+        <a href="index.html#contact">contact</a>
       </div>
-      <div class="subtitle">B.S. Information Technology, Minor in Mathematics &middot; Overall GPA: 3.30 &middot; Major GPA: 3.40</div>
-      <ul>
-        <li>Coursework: Artificial Intelligence, Computer Networks, Computer Security, Database Systems, Data Structures & Algorithms, Internet Computing, Systems Programming</li>
-        <li>Capstone labs: DNS, firewall configuration, site-to-site VPN, subnetting, VLANs, and switch trunk routing in Cisco Packet Tracer</li>
-      </ul>
     </div>
-  </div>
+  </nav>
 
-  <!-- TECHNICAL PROJECTS -->
-  <div class="resume-section">
-    <div class="resume-section-title">Technical Projects</div>
+  <main class="container">
 
-    <div class="resume-entry">
-      <div class="resume-entry-header">
-        <h3>Workpath</h3>
-        <span class="date">May 2026 - Present</span>
+    <section class="hero resume-hero" data-screen-label="Resume hero">
+      <p class="hero-kicker">Resume</p>
+      <h1>Nojus Liutikas</h1>
+      <p class="hero-lede">
+        Applied AI and systems engineer focused on the deployment side of AI: the tools,
+        workflows, integrations, and infrastructure that turn models into usable operations.
+      </p>
+      <div class="hero-actions">
+        <a class="editorial-link" href="https://raw.githubusercontent.com/UntitledPhases/UntitledPhases.github.io/main/Nojus_Liutikas_Resume.pdf" target="_blank" rel="noopener">
+          <svg class="link-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10"/></svg>
+          <span>Download PDF</span>
+        </a>
+        <a class="editorial-link" href="mailto:liutikasnojus@gmail.com">
+          <svg class="link-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2.5 4.5h11v7h-11z"/><path d="m3 5 5 4 5-4"/></svg>
+          <span>Email</span>
+        </a>
+        <a class="editorial-link" href="https://github.com/UntitledPhases" target="_blank" rel="noopener">
+          <svg class="link-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 4.5v7m6-7v2.5a2 2 0 0 1-2 2H7"/><circle cx="5" cy="3.5" r="1.5"/><circle cx="5" cy="12.5" r="1.5"/><circle cx="11" cy="3.5" r="1.5"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a class="editorial-link" href="https://www.linkedin.com/in/nojus-liutikas-5803b0210/" target="_blank" rel="noopener">
+          <svg class="link-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 6.5v6m0-9v.1M7 12.5v-6m0 2.5c.5-1.6 3.5-2 3.5 1v2.5"/></svg>
+          <span>LinkedIn</span>
+        </a>
       </div>
-      <div class="subtitle">Agent workflow control layer &middot; <a href="https://github.com/UntitledPhases/workpath">github.com/UntitledPhases/workpath</a></div>
-      <ul>
-        <li>Built a control-plane tool for deploying agentic workflows: authors define the exact SOP an agent follows, including subagent fan-out, reasoning budget, handoff points, and conditional gates.</li>
-        <li>Compiled visual workflow graphs into structured agent packets with operator instructions, context pack, tool policy, and schema-validated audit JSONL.</li>
-        <li>Designed for customer-facing audit: every decision point is inspectable with evidence records, so operators can answer why an agent took a path in production.</li>
-      </ul>
-    </div>
+      <p class="hero-meta">Livingston, NJ &middot; open to California / strong tech hubs</p>
+    </section>
 
-    <div class="resume-entry">
-      <div class="resume-entry-header">
-        <h3>Edge Infrastructure Platform (EIP)</h3>
-        <span class="date">2025 - Present</span>
+    <section class="dossier-section" data-screen-label="Education">
+      <div class="entry">
+        <div class="entry-meta">
+          <span class="ord">01</span>
+          <span>education</span>
+          <span>May 2026</span>
+        </div>
+        <div class="entry-content">
+          <h2 class="entry-title">Montclair State University</h2>
+          <p class="entry-org">B.S. Information Technology, Minor in Mathematics</p>
+          <div class="fact-grid-2">
+            <div class="fact-block">
+              <div class="fact-label">Coursework</div>
+              <p>Artificial Intelligence, Computer Networks, Computer Security, Database Systems, Data Structures &amp; Algorithms, Internet Computing, Systems Programming.</p>
+            </div>
+            <div class="fact-block">
+              <div class="fact-label">Capstone labs</div>
+              <p>DNS, firewall configuration, site-to-site VPN, subnetting, VLANs, and switch trunk routing in Cisco Packet Tracer.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="subtitle">Private infrastructure control plane &middot; <a href="https://github.com/UntitledPhases/edge-infrastructure-platform">github.com/UntitledPhases/edge-infrastructure-platform</a></div>
-      <ul>
-        <li>Engineered a self-hosted compute substrate for personal AI workloads: Raspberry Pi control plane, hub compute node via Wake-on-LAN, and laptop operator.</li>
-        <li>Used Tailscale mesh VPN with MagicDNS as the trust boundary; deployed Flask APIs as systemd services with RAID1 storage and nightly backups.</li>
-        <li>Anchored the design in CIA-triad fundamentals and resource discipline, avoiding orchestration overhead the workload did not justify.</li>
-      </ul>
-    </div>
-  </div>
+    </section>
 
-  <!-- PROFESSIONAL EXPERIENCE -->
-  <div class="resume-section">
-    <div class="resume-section-title">Professional Experience</div>
-
-    <div class="resume-entry">
-      <div class="resume-entry-header">
-        <h3>IT & Operations Lead</h3>
-        <span class="date">Aug 2024 - Present</span>
+    <section class="resume-section" id="projects" data-screen-label="Technical projects">
+      <div class="section-head">
+        <div>
+          <div class="section-label">Technical projects</div>
+          <h2>Projects in agent workflow control and private infrastructure.</h2>
+        </div>
+        <p>The through-line is making the control surfaces explicit: context, tool policy, access, handoffs, and the cost of each abstraction.</p>
       </div>
-      <div class="subtitle">Ramas Climate & Refrigeration LLC, Livingston, NJ</div>
-      <ul>
-        <li>Deployed Claude-based AI workflows across a 7-person company: office, foreman, and four field techs new to LLMs.</li>
-        <li>Architected the Microsoft 365 tenant from scratch, including RBAC, workstation migration, and shared file structure, ending file overwrites from a shared personal OneDrive.</li>
-        <li>Consolidated fragmented customer-facing surfaces across Wix, IONOS, and Google Business Profile; cut a duplicate domain at about $400/year and replaced an outside web developer by building the site in Wix via Claude.</li>
-      </ul>
-    </div>
 
-    <div class="resume-entry">
-      <div class="resume-entry-header">
-        <h3>Development Manager</h3>
-        <span class="date">May 2022 - Aug 2024</span>
+      <div class="resume-list">
+        <article class="resume-project">
+          <div class="entry-meta"><span class="ord">02</span><span>agent workflow layer</span><span>2025 &mdash; Present</span></div>
+          <div class="entry-content">
+            <div class="resume-project-heading">
+              <h3>Workpath</h3>
+              <a href="https://github.com/UntitledPhases/workpath" target="_blank" rel="noopener">Repository</a>
+            </div>
+            <p class="resume-thesis">Local-first SOP composer that turns operator intent into scoped execution packets for AI work nodes.</p>
+            <ul class="entry-points">
+              <li>Compiled workflow graphs into operator instructions, context/tool policy files, and audit/evidence bundles.</li>
+              <li>Designed review gates and handoffs around scoped context, inspectable decisions, and evidence an operator can review.</li>
+            </ul>
+            <p class="project-stack">react / workflow compiler / json / agentic sdlc</p>
+          </div>
+        </article>
+
+        <article class="resume-project">
+          <div class="entry-meta"><span class="ord">03</span><span>private infrastructure</span><span>2025 &mdash; Present</span></div>
+          <div class="entry-content">
+            <div class="resume-project-heading">
+              <h3>Edge Infrastructure Platform</h3>
+              <a href="https://github.com/UntitledPhases/edge-infrastructure-platform" target="_blank" rel="noopener">Repository</a>
+            </div>
+            <p class="resume-thesis">Self-hosted substrate for personal compute and agent workloads, designed for low idle cost, private access, and direct control.</p>
+            <ul class="entry-points">
+              <li>Built a Raspberry Pi control plane, Wake-on-LAN compute orchestration, RAID1 storage, Flask APIs as systemd services, and nightly backups.</li>
+              <li>Used Tailscale mesh VPN with MagicDNS and SSH/RDP as the trust boundary while skipping Docker, Kubernetes, and reverse proxy layers where they added complexity without solving the problem.</li>
+            </ul>
+            <p class="project-stack">python / flask / systemd / tailscale / bash</p>
+          </div>
+        </article>
       </div>
-      <div class="subtitle">Ramas Climate & Refrigeration LLC, Livingston, NJ</div>
-      <ul>
-        <li>Led adoption of digital tools and operational systems across field and office staff.</li>
-        <li>Maintained the company's IT environment across Windows domain, email, shared drives, and access controls.</li>
-      </ul>
-    </div>
+    </section>
 
-    <div class="resume-entry">
-      <div class="resume-entry-header">
-        <h3>HVAC Technician / Site Manager</h3>
-        <span class="date">Feb 2018 - Sept 2021</span>
+    <section class="resume-section" data-screen-label="Professional experience">
+      <div class="section-head compact-head">
+        <div>
+          <div class="section-label">Professional experience</div>
+          <h2>AI rollout, Microsoft 365, and operations work inside a real field-service business.</h2>
+        </div>
       </div>
-      <div class="subtitle">Ramas Climate & Refrigeration LLC, Livingston, NJ</div>
-      <ul>
-        <li>Diagnosed and repaired residential and industrial HVAC systems, including Building Automation Systems on commercial sites.</li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- SKILLS -->
-  <div class="resume-section">
-    <div class="resume-section-title">Skills</div>
+      <div class="resume-list">
+        <div class="entry">
+          <div class="entry-meta">
+            <span class="ord">04</span>
+            <span>Aug 2024 &mdash; Present</span>
+          </div>
+          <div class="entry-content">
+            <h3 class="entry-title">IT &amp; Operations Lead</h3>
+            <p class="entry-org">Ramas Climate &amp; Refrigeration LLC &middot; Livingston, NJ</p>
+            <ul class="entry-points">
+              <li>Deploying Claude-based AI workflows into a non-technical operations team, including scoping, staff enablement, support, and workflow fit.</li>
+              <li>Architected a Microsoft 365 tenant from scratch: business migration, role-based access control, scoped user accounts, workstation migration, and shared file structure.</li>
+              <li>Consolidating fragmented customer-facing systems across Wix, IONOS, and Google Business Profile into a cleaner operations layer.</li>
+            </ul>
+          </div>
+        </div>
 
-    <div class="skills-grid">
-      <span class="label">AI Engineering</span>
-      <span class="value">Context/tool/permission scoping, multi-agent orchestration, Anthropic/OpenAI platforms, LM Studio</span>
+        <div class="entry">
+          <div class="entry-meta">
+            <span class="ord">05</span>
+            <span>May 2022 &mdash; Aug 2024</span>
+          </div>
+          <div class="entry-content">
+            <h3 class="entry-title">Development Manager</h3>
+            <p class="entry-org">Ramas Climate &amp; Refrigeration LLC &middot; Livingston, NJ</p>
+            <ul class="entry-points">
+              <li>Led adoption of digital tools and operational systems across field and office staff.</li>
+              <li>Maintained the company&rsquo;s IT environment across Windows domain, email, shared drives, and access controls.</li>
+            </ul>
+          </div>
+        </div>
 
-      <span class="label">Infrastructure</span>
-      <span class="value">Linux, WSL, Microsoft 365 Administration, Entra ID, Active Directory, systemd, Flask, Git, RAID</span>
+        <div class="entry">
+          <div class="entry-meta">
+            <span class="ord">06</span>
+            <span>Feb 2018 &mdash; Sept 2021</span>
+          </div>
+          <div class="entry-content">
+            <h3 class="entry-title">HVAC Technician / Site Manager</h3>
+            <p class="entry-org">Ramas Climate &amp; Refrigeration LLC &middot; Livingston, NJ</p>
+            <ul class="entry-points">
+              <li>Diagnosed and repaired residential and industrial HVAC systems, including Building Automation Systems on commercial sites.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <span class="label">Networking</span>
-      <span class="value">TCP/IP, DNS, VLANs, firewalls, VPN (Tailscale), Wake-on-LAN, SSH/RDP</span>
+    <section class="resume-section skills-section" data-screen-label="Skills">
+      <div class="section-head compact-head">
+        <div>
+          <div class="section-label">Skills</div>
+          <h2>Working range across AI workflows, infrastructure, and networks.</h2>
+        </div>
+      </div>
+      <div class="skills-grid-editorial">
+        <div class="skill-cell">
+          <div class="skill-label">AI Engineering</div>
+          <p class="skill-value">LLM application development, agent deployment, prompt engineering, evals, structured outputs / tool use, MCP, RAG, local inference.</p>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-label">Infrastructure</div>
+          <p class="skill-value">Linux, WSL, Microsoft 365 administration, Entra ID, Active Directory, systemd, Flask, Git, RAID.</p>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-label">Networking</div>
+          <p class="skill-value">TCP/IP, DNS, VLANs, firewalls, VPN (Tailscale), Wake-on-LAN, SSH/RDP.</p>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-label">Languages</div>
+          <p class="skill-value">Python, Java, C, SQL, Bash, JavaScript, PHP, HTML/CSS.</p>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-label">Certs</div>
+          <p class="skill-value">CompTIA ITF+, EPA 608.</p>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-label">Spoken</div>
+          <p class="skill-value">English (fluent), Lithuanian (fluent), Russian (intermediate).</p>
+        </div>
+      </div>
+    </section>
 
-      <span class="label">Languages</span>
-      <span class="value">Python, Java, C, SQL, Bash, JavaScript, PHP, HTML/CSS</span>
+  </main>
 
-      <span class="label">Containers</span>
-      <span class="value">Docker, Podman, Kubernetes, Jenkins</span>
-
-      <span class="label">Certs</span>
-      <span class="value">CompTIA ITF+, EPA 608</span>
-
-      <span class="label">Spoken</span>
-      <span class="value">English (fluent), Lithuanian (fluent), Russian (intermediate)</span>
-    </div>
-  </div>
+  <footer>
+    <div class="container"><p>built with Workpath</p></div>
+  </footer>
 
 </div>
-
-<site-footer></site-footer>
-<script src="components.js"></script>
-
+<script src="mark.js?v=13"></script>
 </body>
 </html>
