@@ -55,8 +55,10 @@ nav .container { display: flex; justify-content: space-between; align-items: cen
 .nav-links a:hover, .nav-links a.active { color: var(--text); }
 
 /* ---- EDITORIAL LINK (underlined mono) ---- */
-.editorial-link { font-family: var(--mono); text-transform: uppercase; letter-spacing: .12em; color: var(--text-muted); font-size: 11px; border-bottom: 1px solid var(--border-accent); padding-bottom: 5px; background: none; border-top: 0; border-left: 0; border-right: 0; cursor: pointer; display: inline-block; }
+.editorial-link { font-family: var(--mono); text-transform: uppercase; letter-spacing: .12em; color: var(--text-muted); font-size: 11px; border-bottom: 1px solid var(--border-accent); padding-bottom: 5px; background: none; border-top: 0; border-left: 0; border-right: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; }
+.hero-actions .editorial-link { display: inline-flex; }
 .editorial-link:hover { color: var(--text); border-color: var(--text); }
+.link-icon { width: 13px; height: 13px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.35; stroke-linecap: square; stroke-linejoin: miter; opacity: .78; }
 
 /* ============================================================
    HOMEPAGE register (ported from Home.jsx / landing)
