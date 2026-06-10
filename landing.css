@@ -269,7 +269,7 @@ nav .links a {
 }
 
 .project-facts dd,
-.secondary-project p {
+.secondary-project p:not(.project-stack) {
   color: var(--text-muted);
   font-size: 15px;
   line-height: 1.65;
