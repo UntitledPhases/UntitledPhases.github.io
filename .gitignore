@@ -1,0 +1,25 @@
+# Local assistant/editor state
+.claude/
+.codex/
+.vscode/
+.idea/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Dependency/build folders if this static site ever grows tooling
+node_modules/
+dist/
+build/
