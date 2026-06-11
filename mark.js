@@ -452,7 +452,6 @@
     }
 
     start();
-    nav.addEventListener('mouseenter', start);
     window.addEventListener('resize', function () {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(start, 150);
